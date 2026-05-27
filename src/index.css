@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* ==========================================================
+   QUANTREX ACADEMY PREMIUM HIGH-CONTRAST LIGHT ACCENT OVERRIDES
+   ========================================================== */
+
+/* Force global white background across the core viewport */
+html, body, #root, .min-h-screen {
+  background-color: #ffffff !important;
+  color: #1a202c !important; /* Sleek Off-black/Charcoal for ultimate legibility */
+}
+
+/* Force container, panel, card, navigation, sidebar and footer backgrounds to be pure white or clean off-white */
+header, nav, footer, aside, section,
+.bg-slate-950, .bg-slate-900, .bg-slate-905, .bg-slate-950\/90, .bg-slate-950\/60,
+#mobile-nav-panel, [id^="home-course-card-"] {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #2d3748 !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Sub-panels, inputs, and selected grids to render with off-white and soft grays */
+input, textarea, select, .bg-slate-955, .bg-slate-905, .bg-slate-900\/50, tr.hover\:bg-slate-905:hover {
+  background-color: #f7fafc !important;
+  background: #f7fafc !important;
+  color: #1a202c !important;
+  border-color: #cbd5e0 !important;
+}
+
+/* Fix high-contrast text styles for headings and lists */
+h1, h2, h3, h4, h5, h6,
+.text-slate-100, .text-slate-200, .text-slate-300, .text-slate-350, .text-slate-400, .text-slate-405, .text-slate-450, .text-slate-250, .text-slate-205, .text-slate-202,
+p, li, span.font-bold, table th, table td {
+  color: #1a202c !important;
+}
+
+/* Refined subtext/muted layout support */
+.text-slate-400, .text-slate-450, .text-slate-500, .text-slate-505, .text-slate-600 {
+  color: #4a5568 !important;
+}
+
+/* Enforce borders to construct a responsive structural grid with light gray borders instead of heavy dark dividers */
+.border, .border-b, .border-t, .border-r, .border-l,
+.border-slate-800, .border-slate-805, .border-slate-850, .border-slate-900, .border-slate-855, .border-rose-900\/30 {
+  border-color: #e2e8f0 !important;
+}
+
+/* EXCEPTION SAFETY: Keep vibrant action buttons, feedback widgets, alert panels, and statuses high-contrast */
+.bg-gradient-to-r, .bg-cyan-600, .bg-indigo-600, .bg-rose-600, .bg-emerald-600, .bg-gradient-to-br,
+.bg-cyan-500\/10, .bg-emerald-500\/10, .bg-indigo-500\/10, .bg-amber-500\/10, .bg-rose-500\/10, .bg-rose-500\/20,
+.p-1.5.bg-gradient-to-br, .bg-red-600 {
+  /* Prevent overriding backgrounds of solid premium accents/buttons */
+}
+
+/* Ensure white text inside buttons or badges stays white */
+button span,
+button.bg-gradient-to-r,
+a.bg-gradient-to-r,
+.bg-gradient-to-r span,
+.bg-gradient-to-r div,
+.bg-cyan-600, .bg-indigo-600, .bg-rose-600, .bg-emerald-600, .bg-red-600,
+.bg-cyan-600 *, .bg-indigo-600 *, .bg-rose-600 *, .bg-emerald-600 *, .bg-red-600 * {
+  color: #ffffff !important;
+}
+
+/* Premium micro-shadow highlights for card elements */
+div[id^="home-course-card-"], .bg-slate-900 {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Styling custom scrollbars for light mode compliance */
+::-webkit-scrollbar-track {
+  background: #f7fafc !important;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0 !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0 !important;
+}
+
+/* Print Prevention Safeguard */
+@media print {
+  body {
+    display: none !important;
+  }
+}
+
+/* Interactive helper scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

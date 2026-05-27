@@ -1,0 +1,6 @@
+{
+  "name": "Quantrex Academy",
+  "description": "A premium IIT-JEE Mathematics coaching institute platform featuring adaptive quiz systems, progress timelines, structured resources, simulated checkout, secure anti-download vaults for PDFs and video lectures, and a dedicated student-staff portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
