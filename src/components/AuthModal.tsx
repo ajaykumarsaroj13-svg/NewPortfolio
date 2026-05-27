@@ -7,14 +7,19 @@ import React, { useState } from 'react';
 import { Mail, Lock, User as UserIcon, ShieldAlert, CheckCircle, X } from 'lucide-react';
 import { UserRole } from '../types';
 
-// Import Firebase Authentication and doc storage controls
+// Import local offline persistence layer controls (completely unlinked from remote Firebase)
 import { 
+  db, 
+  auth, 
+  handleFirestoreError, 
+  OperationType,
+  doc, 
+  setDoc, 
+  getDoc,
   signInWithEmailAndPassword, 
   createUserWithEmailAndPassword,
   updateProfile 
-} from 'firebase/auth';
-import { doc, setDoc, getDoc } from 'firebase/firestore';
-import { db, auth, handleFirestoreError, OperationType } from '../lib/firebase';
+} from '../lib/firebase';
 
 interface AuthModalProps {
   isOpen: boolean;

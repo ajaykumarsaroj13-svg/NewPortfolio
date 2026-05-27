@@ -20,10 +20,19 @@ import { Landmark } from 'lucide-react';
 import { User, UserRole, Course, LectureNote, VideoLecture, PYQ, SyllabusItem, Quiz, TestAttempt } from './types';
 import { INITIAL_COURSES, INITIAL_SYLLABUS, INITIAL_NOTES, INITIAL_VIDEOS, INITIAL_PYQS, INITIAL_QUIZZES } from './data';
 
-// Real Firebase SDK integrations
-import { onAuthStateChanged } from 'firebase/auth';
-import { onSnapshot, collection, doc, setDoc, getDoc } from 'firebase/firestore';
-import { db, auth, handleFirestoreError, OperationType } from './lib/firebase';
+// Local, offline-capable database persistence layer (Unlinked completely from remote Firebase)
+import { 
+  db, 
+  auth, 
+  handleFirestoreError, 
+  OperationType,
+  onAuthStateChanged,
+  onSnapshot,
+  collection,
+  doc,
+  setDoc,
+  getDoc
+} from './lib/firebase';
 
 export default function App() {
   // Navigation
